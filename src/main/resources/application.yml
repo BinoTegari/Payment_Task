@@ -1,0 +1,9 @@
+server:
+  servlet:
+    context-path: /test
+  port: 8081
+
+feign:
+  services:
+    paymentService:
+      url: https://app-demo.paze.eu
