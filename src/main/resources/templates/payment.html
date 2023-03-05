@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="EN">
+<head>
+    <title>Create Payment page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Payment</h1>
+<form action="#" th:action="@{/create}" th:object="${form}" method="post">
+    <p th:text="'paymentType: ' + ${form.getPaymentType()}"/>
+    <p th:text="'currency: ' + ${form.getCurrency()}"/>
+    <p>Amount: <input type="text" th:field="*{amount}"/></p>
+    <p><input type="submit" value="Submit"/></p>
+</form>
+</body>
+</html>

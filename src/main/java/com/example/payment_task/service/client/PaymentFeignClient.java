@@ -1,10 +1,9 @@
 package com.example.payment_task.service.client;
 
-import com.example.payment_task.model.PaymentDto;
+import com.example.payment_task.model.PaymentForm;
 import com.example.payment_task.model.PaymentResponseDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.cloud.openfeign.FeignClientProperties;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -13,6 +12,5 @@ import org.springframework.web.bind.annotation.RequestHeader;
         configuration = FeignClientProperties.FeignClientConfiguration.class)
 public interface PaymentFeignClient {
     @PostMapping("/payments")
-    PaymentResponseDto getResponse(@RequestBody PaymentDto paymentDto, @RequestHeader("Authorization") String bearer);
-
+    PaymentResponseDto getResponse(@RequestBody PaymentForm paymentForm, @RequestHeader("Authorization") String bearer);
 }

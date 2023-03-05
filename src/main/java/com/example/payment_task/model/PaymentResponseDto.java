@@ -8,5 +8,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PaymentResponseDto {
-    private String returnUrl;
+    public Result result;
+
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public class Result {
+        private String redirectUrl;
+        private String currency;
+        private long amount;
+        private String state;
+        private String paymentType;
+        private String id;
+    }
+
 }
