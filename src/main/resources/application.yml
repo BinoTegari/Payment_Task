@@ -4,4 +4,4 @@ server:
 feign:
   services:
     paymentService:
-      url: https://app-demo.paze.eu
+      url: https://app-demo.paze.eu/api/v1
